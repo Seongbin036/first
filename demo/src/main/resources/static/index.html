@@ -1,0 +1,127 @@
+<html>
+<meta charset="UTF-8">
+    <header>
+        <title>테스트 화면 !!!!!</title>
+        <link rel="stylesheet" href="index.css">
+    </header>
+
+    <body>
+        <script>
+        function valuedation(){
+            var ID = document.getElementById('ID');
+              
+            if (ID.value == null || ID.value == ""){
+                alert("아이디를 입력해주십시오.");
+                return false;
+            }                
+               var PW = document.getElementById('PW');
+                
+            if (PW.value == null || PW.value == ""){
+                alert("비밀번호를 입력해주십시오.");
+                return false;
+            }
+
+            var PW_CHK = document.getElementById('PW_CHK');
+
+            if (PW_CHK.value == null || PW_CHK.value == ""){
+                alert("비밀번호 확인을 입력해주십시오.");
+                return false;
+            }
+                  
+            var PW = document.getElementById('PW');
+            var PW_CHK = document.getElementById('PW_CHK');
+                
+            if (PW.value != PW_CHK.value){
+                alert("패스워드를 맞춰주세요.");
+                return false;  
+            }
+
+            var name = document.getElementById('name');
+                
+            if (name.value == null || name.value == ""){
+                alert("이름을 입력해주십시오.");
+                return false;
+            }
+                
+            var nickname = document.getElementById('nickname');
+                
+            if (nickname.value == null || nickname.value == ""){
+                alert("닉네임을 입력해주십시오.");
+                return false;
+            }
+
+            var email = document.getElementById('email');
+                
+            if (email.value == null || email.value == ""){
+                alert("이메일을 입력해주십시오.");
+                return false;
+            }
+                
+             var emailadress = document.getElementById('emailadress');// 이메일 미 선택시 선택요구
+                
+            if (emailadress.value == null || emailadress.value == ""){
+                alert("이메일을 선택해주십시오.");
+                return false;
+            }
+        }
+        </script>
+        <style>
+        
+
+       
+        </style>
+        <script>
+            function errortext(){
+                var pattern_eng = /[a-zA-Z]/;
+                var pattern_kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+                var pattern_num = /[0-9]/;
+
+                var ID = document.getElementById('ID');
+
+               // if (pattern_eng =ID )
+//
+               // }
+
+            }
+        </script>
+        <div class="main_div" style="margin-left: 50%;">
+            <div class = "main_title" style="font-size:30px">
+                회원가입 
+            </div>
+                <table calss= "main_table">
+                    <tr> 
+                        <td>ID</td>  <td><input type="text" ID="ID" name="join" onkeypress ="errortext()"></td> <td hidden>에러메세지</td>
+                    </tr>
+                    <tr>
+                        <td>PW</td> <td><input type="password"  ID="PW" name="join"> </td> 
+                    </tr>
+                    <tr>
+                        <td>PW check</td> <td> <input type="password" ID="PW_CHK" name="join"></td> 
+                    </tr>
+                    <tr>
+                        <td>이름</td> <td><input type="text" ID="name"></td> 
+                    </tr>
+                    <tr>
+                        <td>닉네임</td> <td><input type="text" ID="nickname"></td> 
+                    </tr>
+                    <tr> 
+                        <td>이메일</td> <td> <input type="text" ID="email"> @ 
+                        <select id="emailadress" > 
+                            <option value="">이메일선택</option>
+                            <option value="01">naver.com</option>
+                            <option value="02">gamil.com</option>
+                            <option value="03">hanmail.com</option>
+                        </select></td> 
+                    </tr>
+                    <tr>
+                        <td>기타</td> <td> <textarea id="ext" cols="22" rows="3"> </textarea></td> 
+                    </tr>
+                </table>
+                <div class ="button" style="float:right">
+                        <input type="submit" id="submit" value="회원가입" onclick="valuedation()">  
+        
+                        <input type="button" id="exit" value="취소" >      
+                </div>
+        </div>
+    </body>
+</html>
