@@ -1,0 +1,119 @@
+<html>
+<meta charset="UTF-8">
+    <head>
+            <link rel="stylesheet" href="p.css">
+    </head>
+    <body>
+        <script>
+            function valuedation(){
+                var ID = document.getElementById('ID');
+                        
+                if (ID.value == null || ID.value == ""){
+                    alert("아이디를 입력해주십시오.");
+                    return false;
+                }
+                        
+                var PW = document.getElementById('PW');
+                        
+                if (PW.value == null || PW.value == ""){
+                    alert("비밀번호를 입력해주십시오.");
+                    return false;
+                }
+        
+                var PW_CHK = document.getElementById('PW_CHK');
+        
+                if (PW_CHK.value == null || PW_CHK.value == ""){
+                    alert("비밀번호 확인을 입력해주십시오.");
+                    return false;
+                }
+                          
+                var PW = document.getElementById('PW');
+                var PW_CHK = document.getElementById('PW_CHK');
+                        
+                if (PW.value != PW_CHK.value){
+                    alert("패스워드를 맞춰주세요.");
+                    return false;  
+                }
+        
+                var name = document.getElementById('name');
+                        
+                if (name.value == null || name.value == ""){
+                    alert("이름을 입력해주십시오.");
+                    return false;
+                }
+                        
+                var nickname = document.getElementById('nickname');
+                        
+                if (nickname.value == null || nickname.value == ""){
+                    alert("닉네임을 입력해주십시오.");
+                    return false;
+                }
+        
+                var email = document.getElementById('email');
+                        
+                if (email.value == null || email.value == ""){
+                    alert("이메일을 입력해주십시오.");
+                    return false;
+                }
+                        
+                var emailadress = document.getElementById('emailadress');// 이메일 미 선택시 선택요구
+                        
+                if (emailadress.value == null || emailadress.value == ""){
+                    alert("이메일을 선택해주십시오.");
+                    return false;
+                }
+            }
+        </script>
+        <script>
+            function errortext(){
+                var pattern_eng = /[a-zA-Z]/;
+                var pattern_kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+                var pattern_num = /[0-9]/;
+        
+                var ID = document.getElementById('ID');
+        
+                //if (pattern_eng =ID 
+        
+                //}
+        
+            }
+                </script>
+        <h1 class="main_title" style="font-size:40px; text-align: center;">회원가입</h1>
+     
+        <div class="main_div" style="margin-left: 45%">
+            <p>아이디</p>
+            <p1><input type="text" id="ID" class="input_style"></p1>
+
+            <p>비밀번호</p>
+            <p1><input type="text" id="PW" class="input_style"></p1>
+            
+            <p>비밀번호 확인</p>
+            <p1><input type="text" id="PW_CHK" class="input_style"></p1>
+
+            <p>이름</p>
+            <p1><input type="text" id="name" class="input_style"></p1>
+
+            <p>닉네임</p>
+            <p1><input type="text" id="nickname" class="input_style"></p1>
+
+            <p>이메일</p>
+            <p2><input type="text" id="email" class="input_style"> @
+                <select id="emailadress" class="select_style"> 
+                    <option value="">이메일선택</option>
+                    <option value="01">naver.com</option>
+                    <option value="02">gamil.com</option>
+                    <option value="03">hanmail.com</option>
+                </select>
+            </p2>
+
+            <p>기타</p>
+            <p2><textarea id="ext" cols="75" rows="3"> </textarea></p2>
+
+            <div class ="button">
+                <input type="submit" id="submit" value="회원가입" onclick="valuedation()">  
+        
+                <input type="button" id="exit" value="취소" >      
+            </div>
+        </div>
+    </body>
+</html>
