@@ -1,0 +1,18 @@
+p{font-size:20px; margin-bottom:4;}
+
+.input_style{width:350px; height:42px; font-size:15px;}
+
+.select_style{width:150px; height:42px; font-size:20px;}
+
+input[type=text], input[type=password]{
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #999;
+}
+input[type=text]:focus, input[type=password]:focus{
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid #299100;
+}
+
+.main_title{font-size:40px; text-align: center;}
+
+#whynot{width:550px; margin-left:auto; margin-right:auto;}
